@@ -2,7 +2,7 @@
 This algorithm is designed to search for carbohydrate binding TRP residues in a given protein PDB file. This was developed by Provart lab from University of Toronto.
 
 Instructions:
-download the parameters folder /pai_ring and the script cho_screening.pl
+download the parameters files and the script cho_screening.pl
 prepare: setup the pdb file path in cho_screening.pl
 run: perl cho_screening.pl pdb_name
 output: if there are binding TRP residues in the given PDB file, those residues will be printed out.
