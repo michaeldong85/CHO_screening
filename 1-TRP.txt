@@ -1,0 +1,5 @@
+CG 
+CD1
+NE1
+CE2
+CD2
