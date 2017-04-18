@@ -177,7 +177,7 @@ sub ring_information{
 	$ring_name=substr($array[0],0,3);
 	if ((substr($array[0],0,3) eq "HIS") or (substr($array[0],0,3) eq "PHE") or (substr($array[0],0,3) eq "TYR"))
 	{
-		open FILE, "pai_ring/1-$name.txt" or die $!;
+		open FILE, "1-$name.txt" or die $!;
 		my @lines=<FILE>; chomp(@lines);
 		($xo, $yo, $zo); my @x; my @y; my @z;
 		for (my $m=0; $m<scalar(@lines); ++$m)
@@ -200,9 +200,9 @@ sub ring_information{
 	}
 	else
 	{
-		open FILE, "pai_ring/1-TRP.txt" or die $!;
+		open FILE, "1-TRP.txt" or die $!;
 		my @lines1=<FILE>; chomp(@lines1);
-		open FILE, "pai_ring/2-TRP.txt" or die $!;
+		open FILE, "2-TRP.txt" or die $!;
 		my @lines2=<FILE>; chomp(@lines2);
 		my ($xo1, $yo1, $zo1); my @x1; my @y1; my @z1;
 		for (my $m=0; $m<scalar(@lines1); ++$m)
@@ -252,7 +252,7 @@ sub aromatic_residue_verification{
 	for (my $m=0; $m<scalar(@list); ++$m)
 	{
 		my $ring_name=substr($list[$m],0,3);
-		open FILE, "pai_ring/$ring_name.txt" or die $!;
+		open FILE, "$ring_name.txt" or die $!;
 		my @lines=<FILE>;
 		my $judge=0;
 		for (my $n=0; $n<scalar(@lines); ++$n)
